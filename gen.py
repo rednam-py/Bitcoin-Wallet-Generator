@@ -238,21 +238,23 @@ seeds = ["abandon", "ability", "able", "about", "above", "absent", "absorb", "ab
 
 
 #print(random.shuffle(seeds))
-
+print ("Enter Length For Your Wallets ")
+length_of_wallet = input()
 n_seed = seeds
-n_seed = random.sample(seeds, 12)
+n_seed = random.sample(seeds, length_of_wallet)
 
+print ("Enter Flie Name for Generated Wallets ex: wallet.txt ")
 
+flie_name = input()
+os.system(f"sudo touch {file_name}")
 
-file = open("list", "a")
+file = open(file_name, "a")
 
 global count 
 
 count = 0
 
 for seed in n_seed:
-	
-	
 	
 	file.write(seed)
 	file.write(" ")
